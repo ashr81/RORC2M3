@@ -13,8 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20151111082645) do
 
-  =begin
-create_table "to_do_items", force: :cascade do |t|
+  create_table "to_do_items", force: :cascade do |t|
     t.date     "due_date"
     t.string   "title"
     t.string   "description"
@@ -22,8 +21,6 @@ create_table "to_do_items", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-  =end
-
 
   create_table "todo_items", force: :cascade do |t|
     t.date     "due_date"

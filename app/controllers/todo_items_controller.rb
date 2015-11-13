@@ -29,7 +29,7 @@ class TodoItemsController < ApplicationController
     respond_to do |format|
       if @todo_item.save
         format.html { redirect_to todo_items_url, notice: 'Todo item was successfully created.' }
-        format.json { render :show, status: :created, location: @todo_item }
+        format.json { render @todo_items_url, status: :created, location: @todo_item }
       else
         format.html { render :new }
         format.json { render json: @todo_item.errors, status: :unprocessable_entity }
